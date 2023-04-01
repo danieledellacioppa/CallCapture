@@ -5,6 +5,8 @@ CallCapture is an Android app that allows you to record phone calls on your devi
 ## Features
 
 - Record incoming and outgoing phone calls
+  * Learn how to access and record audio from the device's microphone and speaker
+        + To record phone calls, you'll need to access the audio input and output streams on the device. You can do this using the Android AudioRecord and AudioTrack classes, which allow you to capture audio data from the microphone and play it back through the speaker. You'll need to learn how to use these classes to capture and save audio data to a file.
 - Save recordings in various formats, including AAC, AMR, and WAV
 - Rename and delete recordings from within the app
 - Share recordings via email, messaging, or other apps
