@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity
 {
     TextView dbgConsole;
     Button captureButton;
+    MyAdminReceiver myAdminReceiver = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setAdminReceiver();
 
         captureButton = findViewById(R.id.captureBtn);
         //give captureButton callReceiverRunnable
@@ -44,6 +46,12 @@ public class MainActivity extends AppCompatActivity
         dbgConsole.setText("");
         new DebugString("copilotino!", dbgConsole);
 
+    }
+
+    void setAdminReceiver()
+    {
+        myAdminReceiver = new MyAdminReceiver();
+        myAdminReceiver.showToast(this, "Device Admin launched");
     }
 
     class CallReceiverRunnable implements Runnable
