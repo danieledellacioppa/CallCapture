@@ -48,6 +48,6 @@ Recording phone calls without the other person's consent may be illegal in some 
 # CAPTURE_AUDIO_OUTPUT permission
 The CAPTURE_AUDIO_OUTPUT permission is a system-level permission that is only granted to system apps. This is because it allows an app to capture audio being played by other apps, which can potentially be used for malicious purposes.
 
-If you need to capture audio output in your app, you may want to consider using the MediaProjection API, which allows your app to capture the device's screen and audio output. However, this requires the user to grant permission for screen recording, which may not be ideal in all situations.
+If you need to capture audio output in your app, you may want to consider using the [MediaProjection API](https://developer.android.com/reference/android/media/projection/MediaProjection), which allows your app to capture the device's screen and audio output. However, this requires the user to grant permission for screen recording, which may not be ideal in all situations.
 
 Alternatively, you can prompt the user to manually select the audio source using the AudioManager API, and then record the audio using the MediaRecorder API. This will not allow you to capture audio being played by other apps, but it can be used to record audio from the device's microphone or other input sources.
