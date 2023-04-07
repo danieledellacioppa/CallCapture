@@ -44,3 +44,10 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Disclaimer
 
 Recording phone calls without the other person's consent may be illegal in some areas. It is your responsibility to check your local laws and regulations before using this app. The developer assumes no liability for any misuse or legal consequences of using this app.
+
+# CAPTURE_AUDIO_OUTPUT permission
+The CAPTURE_AUDIO_OUTPUT permission is a system-level permission that is only granted to system apps. This is because it allows an app to capture audio being played by other apps, which can potentially be used for malicious purposes.
+
+If you need to capture audio output in your app, you may want to consider using the MediaProjection API, which allows your app to capture the device's screen and audio output. However, this requires the user to grant permission for screen recording, which may not be ideal in all situations.
+
+Alternatively, you can prompt the user to manually select the audio source using the AudioManager API, and then record the audio using the MediaRecorder API. This will not allow you to capture audio being played by other apps, but it can be used to record audio from the device's microphone or other input sources.
