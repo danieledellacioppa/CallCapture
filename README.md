@@ -51,3 +51,13 @@ The CAPTURE_AUDIO_OUTPUT permission is a system-level permission that is only gr
 If you need to capture audio output in your app, you may want to consider using the [MediaProjection API](https://developer.android.com/reference/android/media/projection/MediaProjection), which allows your app to capture the device's screen and audio output. However, this requires the user to grant permission for screen recording, which may not be ideal in all situations.
 
 Alternatively, you can prompt the user to manually select the audio source using the AudioManager API, and then record the audio using the MediaRecorder API. This will not allow you to capture audio being played by other apps, but it can be used to record audio from the device's microphone or other input sources.
+
+## steps
+
+1. Request permission to use the Media Projection API by calling startActivityForResult() with an Intent object that specifies the ACTION_MEDIA_PROJECTION intent action.
+
+2. Once the user grants permission, the Media Projection API will return a MediaProjection object, which you can use to capture the phone call audio.
+
+3. Use the Android AudioRecord class to capture the audio from the phone call. You can specify the audio source to be the phone call audio using the MediaRecorder.AudioSource.VOICE_CALL constant.
+
+4. Save the recorded audio to a file using the Android MediaRecorder class
